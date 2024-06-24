@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+
 @main
 struct ExchangeRatesApp: App {
+
     var body: some Scene {
         WindowGroup {
             ContentView()

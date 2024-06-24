@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CalendarView",
+        "repositoryURL": "https://github.com/bakeleet/CalendarView",
+        "state": {
+          "branch": "main",
+          "revision": "274163743157d007195016ee4f2191fe195201ce",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

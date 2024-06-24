@@ -14,6 +14,13 @@
 		2C27AE3C2C28BA1700539E19 /* ExchangeRatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27AE3B2C28BA1700539E19 /* ExchangeRatesTests.swift */; };
 		2C27AE462C28BA1700539E19 /* ExchangeRatesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27AE452C28BA1700539E19 /* ExchangeRatesUITests.swift */; };
 		2C27AE482C28BA1700539E19 /* ExchangeRatesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27AE472C28BA1700539E19 /* ExchangeRatesUITestsLaunchTests.swift */; };
+		2C27AE572C28BC7C00539E19 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27AE562C28BC7C00539E19 /* ViewModel.swift */; };
+		2C27AE5C2C29847400539E19 /* RESTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27AE5B2C29847400539E19 /* RESTManager.swift */; };
+		2C27AE5E2C29849C00539E19 /* RESTCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27AE5D2C29849C00539E19 /* RESTCache.swift */; };
+		2C27AE612C29857F00539E19 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27AE602C29857F00539E19 /* DateFormatter+Extensions.swift */; };
+		2C27AE632C29868D00539E19 /* ExchangeRatesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27AE622C29868D00539E19 /* ExchangeRatesTable.swift */; };
+		2C27AE652C2986A500539E19 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27AE642C2986A500539E19 /* ExchangeRate.swift */; };
+		2C27AE692C29E52A00539E19 /* CalendarView in Frameworks */ = {isa = PBXBuildFile; productRef = 2C27AE682C29E52A00539E19 /* CalendarView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,12 @@
 		2C27AE412C28BA1700539E19 /* ExchangeRatesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRatesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C27AE452C28BA1700539E19 /* ExchangeRatesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesUITests.swift; sourceTree = "<group>"; };
 		2C27AE472C28BA1700539E19 /* ExchangeRatesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C27AE562C28BC7C00539E19 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		2C27AE5B2C29847400539E19 /* RESTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTManager.swift; sourceTree = "<group>"; };
+		2C27AE5D2C29849C00539E19 /* RESTCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTCache.swift; sourceTree = "<group>"; };
+		2C27AE602C29857F00539E19 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		2C27AE622C29868D00539E19 /* ExchangeRatesTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesTable.swift; sourceTree = "<group>"; };
+		2C27AE642C2986A500539E19 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C27AE692C29E52A00539E19 /* CalendarView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +88,12 @@
 		2C27AE1E2C28BA1200539E19 = {
 			isa = PBXGroup;
 			children = (
+				2C27AE542C28BBFF00539E19 /* Packages */,
 				2C27AE292C28BA1200539E19 /* ExchangeRates */,
 				2C27AE3A2C28BA1700539E19 /* ExchangeRatesTests */,
 				2C27AE442C28BA1700539E19 /* ExchangeRatesUITests */,
 				2C27AE282C28BA1200539E19 /* Products */,
+				2C27AE582C28BD7700539E19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +112,8 @@
 			children = (
 				2C27AE2A2C28BA1200539E19 /* ExchangeRatesApp.swift */,
 				2C27AE2C2C28BA1200539E19 /* ContentView.swift */,
+				2C27AE562C28BC7C00539E19 /* ViewModel.swift */,
+				2C27AE5F2C2984DF00539E19 /* REST */,
 				2C27AE2E2C28BA1700539E19 /* Assets.xcassets */,
 				2C27AE302C28BA1700539E19 /* Preview Content */,
 			);
@@ -127,6 +145,40 @@
 			path = ExchangeRatesUITests;
 			sourceTree = "<group>";
 		};
+		2C27AE542C28BBFF00539E19 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		2C27AE582C28BD7700539E19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C27AE5F2C2984DF00539E19 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				2C27AE602C29857F00539E19 /* DateFormatter+Extensions.swift */,
+				2C27AE5D2C29849C00539E19 /* RESTCache.swift */,
+				2C27AE5B2C29847400539E19 /* RESTManager.swift */,
+				2C27AE662C2986CD00539E19 /* JSON */,
+			);
+			path = REST;
+			sourceTree = "<group>";
+		};
+		2C27AE662C2986CD00539E19 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				2C27AE622C29868D00539E19 /* ExchangeRatesTable.swift */,
+				2C27AE642C2986A500539E19 /* ExchangeRate.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +195,9 @@
 			dependencies = (
 			);
 			name = ExchangeRates;
+			packageProductDependencies = (
+				2C27AE682C29E52A00539E19 /* CalendarView */,
+			);
 			productName = ExchangeRates;
 			productReference = 2C27AE272C28BA1200539E19 /* ExchangeRates.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 2C27AE1E2C28BA1200539E19;
+			packageReferences = (
+				2C27AE672C29E52A00539E19 /* XCRemoteSwiftPackageReference "CalendarView" */,
+			);
 			productRefGroup = 2C27AE282C28BA1200539E19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C27AE2D2C28BA1200539E19 /* ContentView.swift in Sources */,
+				2C27AE5C2C29847400539E19 /* RESTManager.swift in Sources */,
+				2C27AE632C29868D00539E19 /* ExchangeRatesTable.swift in Sources */,
+				2C27AE612C29857F00539E19 /* DateFormatter+Extensions.swift in Sources */,
+				2C27AE652C2986A500539E19 /* ExchangeRate.swift in Sources */,
+				2C27AE572C28BC7C00539E19 /* ViewModel.swift in Sources */,
+				2C27AE5E2C29849C00539E19 /* RESTCache.swift in Sources */,
 				2C27AE2B2C28BA1200539E19 /* ExchangeRatesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,8 +489,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,8 +518,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -585,6 +649,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C27AE672C29E52A00539E19 /* XCRemoteSwiftPackageReference "CalendarView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bakeleet/CalendarView";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C27AE682C29E52A00539E19 /* CalendarView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C27AE672C29E52A00539E19 /* XCRemoteSwiftPackageReference "CalendarView" */;
+			productName = CalendarView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C27AE1F2C28BA1200539E19 /* Project object */;
 }
