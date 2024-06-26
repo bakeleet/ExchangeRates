@@ -17,19 +17,39 @@ struct ContentView: View {
         VStack {
             CalendarView(viewModel: viewModel.calendarViewModel)
                 .frame(height: viewModel.calendarHeight ?? 200.0)
-            Spacer()
             Text(viewModel.selectedDate)
-            Spacer()
-            VStack {
-                if let exchangeRateTable = viewModel.exchangeRateTable {
-                    Text("Currency name: \(exchangeRateTable[0].rates[1].currency)")
-                    Text("Currency code: \(exchangeRateTable[0].rates[1].code)")
-                    Text("Currency rate: \(exchangeRateTable[0].rates[1].mid)")
-                } else {
-                    Text("No data available")
-                }
+                .font(.headline)
+            if let effectiveDate = viewModel.effectiveDate {
+                Text(effectiveDate)
+                    .font(.subheadline)
             }
-            Spacer()
+            ScrollView {
+                LazyVStack(spacing: 10) {
+                    if let exchangeRateTable = viewModel.exchangeRateTable {
+                        ForEach(exchangeRateTable.rates, id: \.code) { rate in
+                            VStack {
+                                Text(rate.currency)
+                                HStack {
+                                    Spacer()
+                                    Text(rate.code)
+                                    Spacer()
+                                    Text("\(rate.mid)")
+                                    Spacer()
+                                }
+                                .padding(10)
+                            }
+                            .padding(10)
+                            .background(content: {
+                                Color.blue.opacity(0.15)
+                                    .cornerRadius(25)
+                            })
+                        }
+                    } else {
+                        ProgressView()
+                    }
+                }
+                .padding(10)
+            }
         }
     }
 }
